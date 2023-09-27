@@ -19,9 +19,9 @@ mongoose.connect("mongodb://root:example@mongo:27017/")
     .then((db) => console.log("MongoDB Connected "))
     .catch((err) => console.log("error occured" + err))
 
-const { Client } = require("pg")
-const client = new Client({ connectionString: "postgresql://root:example@postgres:5432" })
-client.connect().then(() => console.log("PostgresDB Connected "))
+// const { Client } = require("pg")
+// const client = new Client({ connectionString: "postgresql://root:example@postgres:5432" })
+// client.connect().then(() => console.log("PostgresDB Connected "))
 
 app.get('/',async (req, res) => {
     redis.set("Name", "Omar")
